@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <select>
+            <option value="广东">广东</option>
+            <option value="广西">广西</option>
+            <option value="湖南">湖南</option>
+        </select>
+        <select>
+            <option value="深圳">深圳</option>
+            <option value="广州">广州</option>
+            <option value="惠州">惠州</option>
+        </select>
+        <select>
+            <option value="南山">南山</option>
+            <option value="福田">福田</option>
+            <option value="龙华">龙华</option>
+        </select>
+        <div>
+            <span>省:</span>
+            <span>市:</span>
+            <span>区:</span>
+        </div>
+    </div>
+
+    <script>
+
+        // 3个select需要3个数组来驱动视图.
+        // 第一个select选择数据后,后续的select自动筛选出对应二级数据.(视图更新)
+
+        let info = [
+            {
+                index: 1,
+                AREA_NAME: '广东',
+                city: [
+                    {
+                        index: 1,
+                        AREA_NAME: '深圳市',
+                        district: [
+                            {
+                                index: 1,
+                                AREA_NAME: '宝安区'
+                            },
+                            {
+                                index: 2,
+                                AREA_NAME: '南山区'
+                            },
+                            {
+                                index: 3,
+                                AREA_NAME: '福田区'
+                            }
+                        ]
+                    },{
+                        index: 1,
+                        AREA_NAME: '广州市',
+                        district: [
+                            {
+                                index: 1,
+                                AREA_NAME: '白云区'
+                            },
+                            {
+                                index: 2,
+                                AREA_NAME: '青秀区'
+                            },
+                            {
+                                index: 3,
+                                AREA_NAME: '崇文区'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                index: 2,
+                AREA_NAME: '河北',
+                city: [
+                    {
+                        index: 2,
+                        AREA_NAME: '石家庄市',
+                        district: [
+                            {
+                                index: 4,
+                                AREA_NAME: '长安区'
+                            },
+                            {
+                                index: 5,
+                                AREA_NAME: '桥东区'
+                            },
+                            {
+                                index: 6,
+                                AREA_NAME: '桥西区'
+                            }
+                        ]
+                    },
+                    {
+                        index: 3,
+                        AREA_NAME: '唐山市',
+                        district: [
+                            {
+                                index: 7,
+                                AREA_NAME: '路南区'
+                            },
+                            {
+                                index: 8,
+                                AREA_NAME: '路北区'
+                            },
+                            {
+                                index: 9,
+                                AREA_NAME: '古冶区'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+
+    </script>
+
+</body>
+
+</html>
